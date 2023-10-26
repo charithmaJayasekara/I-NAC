@@ -60,9 +60,9 @@ if st.button('Get Skills'):
     # Decode label
     predicted_job_role = label_encoder.inverse_transform([predicted_label])[0]
 
-    st.success(f"Predicted Job Role: {predicted_job_role}")
+    st.success(f"Predicted Skill Set: {predicted_job_role}")
     
-st.title("Boost Candidates")
+st.title("Top Candidates")
 
 skills = predicted_job_role
 
@@ -109,7 +109,7 @@ if skills:
     top_10_individuals = sorted_individuals[:10]
 
     if top_10_individuals:
-
+        
         results = []
         printed_candidates = set()
 
