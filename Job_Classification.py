@@ -117,7 +117,7 @@ if skills:
             if person['Name'] not in printed_candidates:
                 printed_candidates.add(person['Name'])
                 results.append({"Rank": len(results) + 1, 
-                "CVNumber": person['CVNumber']               
+                "CVNumber": person['CVNumber'],              
                 "Name": person['Name'],
                 "Contact": person.get('Contact', ''),
                 "Score": round(person['Total_Score'], 2)})
