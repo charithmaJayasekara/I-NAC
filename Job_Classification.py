@@ -155,7 +155,6 @@ if skills:
         label="DOWNLOAD!",
         data=results_df,
         file_name="string.txt",
-        mime="text/plain"
-)
+        mime="text/plain")            
     else:
         st.write("No matching candidates found")
