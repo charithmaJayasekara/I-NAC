@@ -64,7 +64,7 @@ div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
 #option = st.selectbox('Select Job Role', start_role)
 
 predicted_job_role = []
-st.header(f'Selected Job Role : {selected_role}')
+st.subheader(f'Selected Job Role : {selected_role}')
 
 if st.button('Get Skills'):
     
