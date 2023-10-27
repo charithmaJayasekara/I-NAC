@@ -49,7 +49,7 @@ start_role = get_unique()
 
 with st.sidebar:
     link = '[Back To Home](http://localhost:3000/login)'
-    st.markdown(link, unsafe_allow_html=True),
+    st.markdown(link),
     selected_role = st.sidebar.radio(
     "Select your Job Role",
     get_unique()
