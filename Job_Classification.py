@@ -153,8 +153,4 @@ if skills:
     else:
         st.write("No matching candidates found")
                  
-st.download_button(
-        label="DOWNLOAD!",
-        data=results_df,
-        file_name="string.txt",
-        mime="text/plain") 
+
