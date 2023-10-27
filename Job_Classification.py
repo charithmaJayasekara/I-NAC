@@ -150,11 +150,14 @@ if skills:
         
         st.table(results_df.style.format({'Score': '{:.2f}'}).set_precision(2))  
 
+        csv = results_df.to_csv(index=False)
+
         st.download_button(
-            label="DOWNLOAD!",
-            data=results_df,
-            file_name="string.txt",
-            mime="text/plain") 
+           label="Download CSV",
+           data=csv,
+           file_name='Top_Candidates.csv',
+           mime='text/csv',
+        )
     else:
         st.write("No matching candidates found")
 
