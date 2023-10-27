@@ -47,14 +47,12 @@ def get_unique():
 start_role = get_unique()
 #start_role = {'IT Procurement Specialist', 'Big Data Engineer', 'IT Change Manager', 'CRM Administrator', 'SharePoint Administrator', 'IT Project Manager', 'IT Operations Manager', 'Infrastructure Engineer', 'Software Architect', 'Cloud Engineer', 'Software Development Manager', 'Back-End Developer', 'IT Trainer', 'Full Stack Developer', 'Salesforce Developer', 'WordPress Developer', 'Cybersecurity Analyst', 'DevOps Engineer', 'IT Compliance Manager', 'Graphic Designer', 'Cloud Security Engineer', 'Embedded Systems Engineer', 'SAP Consultant', 'Kotlin Developer', 'QA Engineer', 'Data Scientist', 'IT Auditor', 'UX Researcher', 'HR Manager', 'Natural Language Processing (NLP) Engineer', 'IT Service Delivery Manager', 'Systems Administrator', 'SharePoint Developer', 'SAP Basis Administrator', 'Flutter Developer', 'System Integration Engineer', 'Machine Learning Engineer', 'Ruby on Rails Developer', 'E-commerce Developer', 'ERP Developer', 'Project Manager', 'Marketing Specialist', 'Chatbot Developer', 'IT Business Development Manager', 'Network Engineer', 'Cloud Solutions Architect', 'Software Engineer', 'IT Support Specialist', 'CRM Developer', 'IT Asset Manager', 'Data Engineer', 'UI/UX Designer', 'Game Developer', 'Mobile App Developer', 'AI Engineer', 'Cloud Architect', 'Automation Engineer', 'Security Engineer', 'Robotic Process Automation (RPA) Developer', 'Compiler Engineer', 'Full Stack JavaScript Developer', 'Android Developer', 'iOS Developer', 'Unity Developer', 'IT Business Analyst', 'Blockchain Developer', 'IT Risk Manager', 'Business Intelligence Developer', 'AR/VR Developer', 'Front-End Developer', 'Site Reliability Engineer (SRE)', 'Backend API Engineer', 'Robotics Engineer', 'Business Systems Analyst', 'Quality Assurance Manager', 'IT Consultant', 'IT Sales Representative', 'Digital Marketing Analyst', 'IT Security Analyst'}
 
-def open_browser_to_url(url):
-    import webbrowser
-    webbrowser.open_new_tab(url)
+import webbrowser
 
 with st.sidebar:
 
-    if st.button("Open URL"):
-      open_browser_to_url("http://localhost:8501/"),
+    if st.button("Open Webpage"):
+      webbrowser.open_new_tab("http://localhost:8501/")
 
     selected_role = st.sidebar.radio(
     "Select your Job Role",
