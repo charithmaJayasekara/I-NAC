@@ -149,6 +149,13 @@ if skills:
         results_df = pd.DataFrame(results)
         
         st.table(results_df.style.format({'Score': '{:.2f}'})
-          .set_precision(2))
+          .set_precision(2)
+
+        st.download_button(
+        label="DOWNLOAD!",
+        data=results_df,
+        file_name="string.txt",
+        mime="text/plain"
+)
     else:
         st.write("No matching candidates found")
