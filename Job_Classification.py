@@ -52,7 +52,7 @@ import webbrowser
 with st.sidebar:
 
     if st.button("Back To Home"):
-      time.sleep(0.5) 
+      #time.sleep(0.5) 
       webbrowser.open_new_tab("http://localhost:8501/")
 
     selected_role = st.sidebar.radio(
