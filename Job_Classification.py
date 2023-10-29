@@ -1,4 +1,5 @@
 import csv
+import requests
 import nltk
 import joblib
 import streamlit as st
@@ -18,6 +19,8 @@ nltk.download('wordnet')
 # Load models
 vectorizer = joblib.load("vectorizer.pkl")
 label_encoder = joblib.load("label_encoder.pkl")
+
+api_url = 'https://backend-brixc.koyeb.app/managecandidates/managecandidates'
 
 def classifier_model(vectorizer, label_encoder):
     data = pd.read_csv("job_roles.csv")
@@ -147,6 +150,27 @@ if skills:
                 "Contact": person.get('Contact', ''),
                 "Score": round(person['Total_Score'], 2)})
 
+                data = {
+                  "candidate_id": "5f4e50a52f72e06d3b18588d",
+                  "candidate_external_id": person['CVNumber'],
+                  "candidate_name": person['Name'],
+                  "candidate_email": "None",
+                  "candidate_status": 10,
+                  "candidate_contact_number": person.get('Contact', ''),
+                  "job_id": "653ba340695250e6267edb88",
+                  "meeting_id": "",
+                  "join_url": "",
+                  "option": "insert"
+                }
+
+                response = requests.post(api_url, json=data)
+
+                if response.status_code == 200:
+                    print("Request was successful. Response content:")
+                    print(response.text)
+                else:
+                    print("Request failed with status code:", response.status_code)
+
         results_df = pd.DataFrame(results)
         
         st.table(results_df.style.format({'Score': '{:.2f}'}).set_precision(2))  
@@ -161,7 +185,3 @@ if skills:
         )
     else:
         st.write("No matching candidates found")
-
-        
-                 
-
