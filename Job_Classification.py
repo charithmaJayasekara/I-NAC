@@ -31,7 +31,7 @@ def classifier_model(vectorizer, label_encoder):
     
     return classifier
 
-st.title("Job Description to Skills")
+st.title("Best Fit Candidates")
 
 def get_unique():
     start_role = set()
@@ -154,7 +154,7 @@ if skills:
         csv = results_df.to_csv(index=False)
 
         st.download_button(
-           label="Download CSV",
+           label="Download",
            data=csv,
            file_name='Top_Candidates.csv',
            mime='text/csv',
