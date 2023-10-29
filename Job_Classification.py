@@ -154,7 +154,7 @@ if skills:
                   "candidate_id": "5f4e50a52f72e06d3b18588d",
                   "candidate_external_id": person['CVNumber'],
                   "candidate_name": person['Name'],
-                  "candidate_email": "None",
+                  "candidate_email": "person@gmail.com",
                   "candidate_status": 10,
                   "candidate_contact_number": person.get('Contact', ''),
                   "job_id": "653ba340695250e6267edb88",
