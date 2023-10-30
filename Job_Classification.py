@@ -121,7 +121,7 @@ if skills:
             matching_individuals.append(person)
 
     def score_individual(individual):
-        education_weight = {'Bachelor\'s': 1, 'Master\'s': 2, 'Doctoral': 3, 'Phd': 3}
+        education_weight = {'Bachelor\'s': 1,'Bsc\'s': 1, 'MSA\'s': 2,'MSc\'s': 2, 'Master\'s': 2, 'Doctoral': 3, 'Phd': 3}
         skill_weight = {'Python': 5, 'Java': 2, 'SQL': 3, 'Machine Learning': 4, 'Hadoop': 2, 'Spark': 3, 'Hive': 2, 'node js': 1, 'react': 2, 'spring boot': 2, 'git': 2, 'android studio': 3, 'tableau': 4, 'snowflake': 4}
         experience_weight = 0.5
         education_score = education_weight.get(individual['Edu_Qualifications'], 0)
