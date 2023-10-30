@@ -16,6 +16,11 @@ nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 
+def connect_to_mongo_db():
+    client = pymongo.MongoClient("mongodb+srv://nawodyaa59:zLnU8ZSjBaBqSyq5@cluster0.7c9abpa.mongodb.net/?retryWrites=true&w=majority")
+    db = client["cv_data"]
+    collection = db["cv_collection"]
+
 # Load models
 vectorizer = joblib.load("vectorizer.pkl")
 label_encoder = joblib.load("label_encoder.pkl")
